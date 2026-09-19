@@ -8,55 +8,39 @@
     <link rel="stylesheet" href="./gallery.css" />
   </head>
   <body class="gallery-page-bg">
+    <div id="falling-images-container" class="animation-container"></div>
     
     <div class="page-wrapper gallery-page">
       <h1 class="gallery-title">Our Beautiful Memories ✨</h1>
-      <p style="margin-bottom: 3rem; opacity: 0.8; font-family: var(--font-serif); font-size: 1.2rem;">Seven years and counting...</p>
+      <p style="margin-bottom: 2rem; opacity: 0.8; font-family: var(--font-serif); font-size: 1.2rem;">Seven years and counting...</p>
       
-      <div class="masonry-grid">
-        <div class="masonry-item">
-          <img src="WhatsApp Image 2026-09-19 at 7.14.11 PM.jpeg" alt="Memory 1" />
-          <div class="overlay"><span>Beautiful Memories</span></div>
+      <!-- Orbiting Gallery -->
+      <div class="orbit-container">
+        <!-- Center Image -->
+        <div class="center-img-wrapper">
+          <img src="WhatsApp Image 2026-09-19 at 7.14.24 PM (1).jpeg" alt="Besties" class="center-img" />
+          <div class="center-label">Besties</div>
         </div>
-        <div class="masonry-item">
-          <img src="WhatsApp Image 2026-09-19 at 7.14.23 PM.jpeg" alt="Memory 2" />
-          <div class="overlay"><span>Always together</span></div>
-        </div>
-        <div class="masonry-item">
-          <img src="WhatsApp Image 2026-09-19 at 7.14.24 PM (1).jpeg" alt="Memory 3" />
-          <div class="overlay"><span>Besties</span></div>
-        </div>
-        <div class="masonry-item">
-          <img src="WhatsApp Image 2026-09-19 at 7.14.24 PM.jpeg" alt="Memory 4" />
-          <div class="overlay"><span>Smiles</span></div>
-        </div>
-        <div class="masonry-item">
-          <img src="WhatsApp Image 2026-09-19 at 7.14.31 PM.jpeg" alt="Memory 5" />
-          <div class="overlay"><span>Unforgettable</span></div>
-        </div>
-        <div class="masonry-item">
-          <img src="WhatsApp Image 2026-09-19 at 7.14.32 PM.jpeg" alt="Memory 6" />
-          <div class="overlay"><span>Our bond</span></div>
-        </div>
-        <div class="masonry-item">
-          <img src="WhatsApp Image 2026-09-19 at 7.14.36 PM.jpeg" alt="Memory 7" />
-          <div class="overlay"><span>Seven years</span></div>
-        </div>
-        <div class="masonry-item">
-          <img src="WhatsApp Image 2026-09-19 at 7.16.24 PM (1).jpeg" alt="Memory 8" />
-          <div class="overlay"><span>Forever</span></div>
-        </div>
-        <div class="masonry-item">
-          <img src="WhatsApp Image 2026-09-19 at 7.16.24 PM.jpeg" alt="Memory 9" />
-          <div class="overlay"><span>Seerat & Me</span></div>
+        
+        <!-- Orbiting Images -->
+        <div class="orbit">
+          <div class="orbit-item i1"><img src="WhatsApp Image 2026-09-19 at 7.14.11 PM.jpeg" alt="Memory" /></div>
+          <div class="orbit-item i2"><img src="WhatsApp Image 2026-09-19 at 7.14.23 PM.jpeg" alt="Memory" /></div>
+          <div class="orbit-item i3"><img src="WhatsApp Image 2026-09-19 at 7.14.24 PM.jpeg" alt="Memory" /></div>
+          <div class="orbit-item i4"><img src="WhatsApp Image 2026-09-19 at 7.14.31 PM.jpeg" alt="Memory" /></div>
+          <div class="orbit-item i5"><img src="WhatsApp Image 2026-09-19 at 7.14.32 PM.jpeg" alt="Memory" /></div>
+          <div class="orbit-item i6"><img src="WhatsApp Image 2026-09-19 at 7.14.36 PM.jpeg" alt="Memory" /></div>
+          <div class="orbit-item i7"><img src="WhatsApp Image 2026-09-19 at 7.16.24 PM (1).jpeg" alt="Memory" /></div>
+          <div class="orbit-item i8"><img src="WhatsApp Image 2026-09-19 at 7.16.24 PM.jpeg" alt="Memory" /></div>
         </div>
       </div>
 
-      <div style="display: flex; gap: 1rem; margin-top: 4rem; flex-wrap: wrap; justify-content: center;">
+      <div style="display: flex; gap: 1rem; margin-top: 5rem; flex-wrap: wrap; justify-content: center; position: relative; z-index: 10;">
         <a href="./message.html" class="next-btn" style="margin-top: 0;">Previous Page</a>
         <a href="./index.html" class="next-btn" style="margin-top: 0;">Back to Start ❤️</a>
       </div>
     </div>
-
+    
+    <script type="module" src="./gallery.js"></script>
   </body>
 </html>

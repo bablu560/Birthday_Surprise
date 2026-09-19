@@ -62,5 +62,5 @@ function createHeart() {
 }
 
 if (document.getElementById('hearts-container')) {
-  setInterval(createHeart, 300);
+  setInterval(createHeart, 100);
 }

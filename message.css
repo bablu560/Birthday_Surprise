@@ -56,9 +56,7 @@
   transform-style: preserve-3d;
 }
 
-.flip-card.flipped .flip-card-inner {
-  transform: rotateY(180deg);
-}
+/* Animation transforms handled by specific classes */
 
 /* Front and Back Styles */
 .flip-card-front, .flip-card-back {
@@ -82,6 +80,7 @@
   color: white;
   border: 1px solid rgba(255,255,255,0.1);
   box-shadow: inset 0 0 20px rgba(255,255,255,0.05);
+  overflow: hidden; /* Hide falling hearts that go outside */
 }
 
 .flip-card-front span {
@@ -92,7 +91,7 @@
 }
 
 .flip-card-back {
-  transform: rotateY(180deg);
+  /* transform removed for custom classes */
   font-size: 1.05rem;
   line-height: 1.6;
   color: #1e293b;
@@ -126,6 +125,36 @@
 .card-color-9 { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
 .card-color-10 { background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%); }
 
+/* Card Heart Animation (Dynamic) */
+.card-heart {
+  position: absolute;
+  top: -20px;
+  font-size: 2.5rem;
+  animation: fallCardHeart 3s linear forwards;
+  text-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  pointer-events: none;
+  z-index: 5;
+}
+
+@keyframes fallCardHeart {
+  0% { transform: translateY(0) rotate(-15deg); opacity: 0; }
+  10% { opacity: 0.8; }
+  85% { opacity: 0.8; }
+  100% { transform: translateY(350px) rotate(20deg); opacity: 0; }
+}
+
+/* 10 Different Heart Colors */
+.h1 { color: #ff4757; }
+.h2 { color: #ff6b81; }
+.h3 { color: #ff7f50; }
+.h4 { color: #ff9ff3; }
+.h5 { color: #00d2d3; }
+.h6 { color: #54a0ff; }
+.h7 { color: #feca57; }
+.h8 { color: #5f27cd; }
+.h9 { color: #ff9f43; }
+.h10 { color: #ee5253; }
+
 /* Adjust text color for lighter backgrounds to ensure readability */
 .flip-card-back p {
   color: #1e293b;
@@ -147,3 +176,44 @@
     min-height: 300px;
   }
 }
+
+/* 10 Distinct Flip Animations */
+/* 1: Standard Y */
+.anim-1 .flip-card-back { transform: rotateY(180deg); }
+.anim-1.flipped .flip-card-inner { transform: rotateY(180deg); }
+
+/* 2: Standard X */
+.anim-2 .flip-card-back { transform: rotateX(180deg); }
+.anim-2.flipped .flip-card-inner { transform: rotateX(180deg); }
+
+/* 3: Diagonal Right */
+.anim-3 .flip-card-back { transform: rotate3d(1, 1, 0, 180deg); }
+.anim-3.flipped .flip-card-inner { transform: rotate3d(1, 1, 0, 180deg); }
+
+/* 4: Diagonal Left */
+.anim-4 .flip-card-back { transform: rotate3d(-1, 1, 0, 180deg); }
+.anim-4.flipped .flip-card-inner { transform: rotate3d(-1, 1, 0, 180deg); }
+
+/* 5: Scale In Y */
+.anim-5 .flip-card-back { transform: rotateY(-180deg); }
+.anim-5.flipped .flip-card-inner { transform: scale(1.1) rotateY(-180deg); }
+
+/* 6: Scale Out X */
+.anim-6 .flip-card-back { transform: rotateX(-180deg); }
+.anim-6.flipped .flip-card-inner { transform: scale(0.9) rotateX(-180deg); }
+
+/* 7: Slide Up Flip */
+.anim-7 .flip-card-back { transform: rotateY(180deg); }
+.anim-7.flipped .flip-card-inner { transform: translateY(-50px) rotateY(180deg); }
+
+/* 8: Slide Down Flip */
+.anim-8 .flip-card-back { transform: rotateX(180deg); }
+.anim-8.flipped .flip-card-inner { transform: translateY(50px) rotateX(180deg); }
+
+/* 9: Spin Y */
+.anim-9 .flip-card-back { transform: rotateY(180deg); }
+.anim-9.flipped .flip-card-inner { transform: rotateZ(360deg) rotateY(180deg); }
+
+/* 10: Spin X */
+.anim-10 .flip-card-back { transform: rotateX(180deg); }
+.anim-10.flipped .flip-card-inner { transform: rotateZ(-360deg) rotateX(180deg); }
