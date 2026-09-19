@@ -95,7 +95,7 @@
   transform: rotateY(180deg);
   font-size: 1.05rem;
   line-height: 1.6;
-  color: white;
+  color: #1e293b;
   text-align: left;
   align-items: flex-start;
   border: 1px solid rgba(255,255,255,0.2);
@@ -115,16 +115,19 @@
 }
 
 /* Card Colors */
-.card-color-1 { background: linear-gradient(135deg, #FF9A9E 0%, #FECFEF 99%, #FECFEF 100%); }
-.card-color-2 { background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); }
-.card-color-3 { background: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%); }
+.card-color-1 { background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%); }
+.card-color-2 { background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%); }
+.card-color-3 { background: linear-gradient(120deg, #f6d365 0%, #fda085 100%); }
 .card-color-4 { background: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%); }
-.card-color-5 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.card-color-5 { background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%); }
+.card-color-6 { background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); }
+.card-color-7 { background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); }
+.card-color-8 { background: linear-gradient(120deg, #cfd9df 0%, #e2ebf0 100%); }
+.card-color-9 { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
+.card-color-10 { background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%); }
 
 /* Adjust text color for lighter backgrounds to ensure readability */
-.card-color-1.flip-card-back p, 
-.card-color-2.flip-card-back p, 
-.card-color-3.flip-card-back p {
+.flip-card-back p {
   color: #1e293b;
   text-shadow: none;
   font-weight: 500;
