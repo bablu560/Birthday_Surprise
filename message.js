@@ -1,7 +1,17 @@
 // Flip Card Logic
 document.querySelectorAll('.flip-card').forEach(card => {
   card.addEventListener('click', () => {
-    card.classList.toggle('flipped');
+    // If the clicked card is already flipped, just flip it back
+    if (card.classList.contains('flipped')) {
+      card.classList.remove('flipped');
+    } else {
+      // First, flip all cards back
+      document.querySelectorAll('.flip-card').forEach(c => {
+        c.classList.remove('flipped');
+      });
+      // Then, flip the clicked card
+      card.classList.add('flipped');
+    }
   });
 });
 
